@@ -29,7 +29,7 @@ const emit = defineEmits(['cambiarCategoria'])
   border-radius: 20px;
   border: 2px solid var(--primario);
   background: transparent;
-  color: var(--texto);
+  color: var(--primario);
   cursor: pointer;
   font-size: 0.9rem;
   font-weight: 600;

@@ -63,7 +63,7 @@ onMounted(async () => {
 .btn-volver {
   background: none;
   border: 2px solid var(--borde);
-  color: var(--texto);
+  color: var(--borde);
   padding: 8px 18px;
   border-radius: 8px;
   cursor: pointer;
