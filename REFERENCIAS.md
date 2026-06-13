@@ -35,6 +35,17 @@ Se utilizaron portadas de cómics oficiales publicadas por Marvel Entertainment.
 | Loki | https://www.marvel.com/comics/issue/77480/loki_2019_1 |
 | Star-Lord | https://www.marvel.com/comics/issue/50887/legendary_star-lord_2014_1 |
 | Gamora | https://www.marvel.com/comics/issue/59785/gamora_guardian_of_the_galaxy_trade_paperback |
+| Cíclope | https://www.marvel.com/comics/issue/130659/cyclops_2026_1 |
+| Bruja Escarlata | https://www.marvel.com/comics/issue/97133/scarlet_witch_2023_1 |
+| Kingpin | https://www.marvel.com/comics/issue/61619/kingpin_2017_4 |
+| Doctor Doom | https://www.marvel.com/comics/issue/97254/doctor_doom_the_book_of_doom_trade_paperback |
+| Rocket Raccoon | https://www.marvel.com/comics/issue/61670/rocket_2017_6 |
+| Groot | https://www.marvel.com/comics/issue/107819/groot_2023_4 |
+| Drax | https://www.marvel.com/comics/issue/56867/drax_2015_3 |
+| Daredevil | https://www.marvel.com/comics/issue/101077/daredevil_2022_1 |
+| Jessica Jones | https://www.marvel.com/comics/issue/84177/jessica_jones_blind_spot_2020_1 |
+| Luke Cage | https://www.marvel.com/comics/issue/112218/luke_cage_gang_war_2023_1 |
+| Iron Fist | https://www.marvel.com/comics/issue/127620/the_undead_iron_fist_2025_4 |
 
 ### Audio
 Las narraciones de audio son de **producción propia**, grabadas por

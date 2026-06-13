@@ -8,7 +8,8 @@ const busqueda = ref('')
 const categoriaActiva = ref('Todos')
 
 const categorias = computed(() => {
-  const unicas = [...new Set(personajes.value.map(p => p.categoria))]
+  const unicas = new Set()
+  personajes.value.forEach(p => p.categorias.forEach(c => unicas.add(c)))
   return ['Todos', ...unicas]
 })
 
@@ -19,7 +20,7 @@ const personajesFiltrados = computed(() => {
       p.nombre.toLowerCase().includes(texto) ||
       p.nombreReal.toLowerCase().includes(texto)
     const coincideCategoria =
-      categoriaActiva.value === 'Todos' || p.categoria === categoriaActiva.value
+      categoriaActiva.value === 'Todos' || p.categorias.includes(categoriaActiva.value)
     return coincideBusqueda && coincideCategoria
   })
 })

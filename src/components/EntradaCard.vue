@@ -18,13 +18,16 @@ function verDetalle() {
         class="card-img"
         @error="$event.target.src = `https://placehold.co/300x350/1a1a2e/e23636?text=${personaje.nombre}`"
       />
-      <span class="badge-cat">{{ personaje.categoria }}</span>
+      <span class="badge-cat">{{ personaje.categorias[0] }}</span>
       <div v-if="personaje.audio" class="badge-audio">🎧</div>
     </div>
     <div class="card-body">
       <h3 class="card-nombre">{{ personaje.nombre }}</h3>
       <p class="card-nombre-real">{{ personaje.nombreReal }}</p>
       <p class="card-desc">{{ personaje.descripcion }}</p>
+      <div class="card-categorias" v-if="personaje.categorias.length > 1">
+        <span v-for="cat in personaje.categorias" :key="cat" class="tag-cat">{{ cat }}</span>
+      </div>
       <div class="card-poderes">
         <span v-for="poder in personaje.poderes.slice(0, 2)" :key="poder" class="tag-poder">
           {{ poder }}
@@ -114,7 +117,23 @@ function verDetalle() {
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
+}
+
+.card-categorias {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-bottom: 8px;
+}
+
+.tag-cat {
+  background-color: var(--primario);
+  color: #fff;
+  padding: 2px 8px;
+  border-radius: 6px;
+  font-size: 0.7rem;
+  font-weight: 600;
 }
 
 .card-poderes { display: flex; gap: 6px; flex-wrap: wrap; }

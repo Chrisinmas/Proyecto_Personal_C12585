@@ -28,7 +28,9 @@ onMounted(async () => {
           class="detalle-img"
           @error="$event.target.src = `https://placehold.co/400x500/1a1a2e/e23636?text=${personaje.nombre}`"
         />
-        <span class="detalle-cat">{{ personaje.categoria }}</span>
+        <div class="detalle-cats">
+          <span v-for="cat in personaje.categorias" :key="cat" class="detalle-cat">{{ cat }}</span>
+        </div>
         <AudioPlayer v-if="personaje.audio" :src="personaje.audio" :nombre="personaje.nombre" />
       </div>
 
@@ -63,7 +65,7 @@ onMounted(async () => {
 .btn-volver {
   background: none;
   border: 2px solid var(--borde);
-  color: var(--borde);
+  color: var(--texto);
   padding: 8px 18px;
   border-radius: 8px;
   cursor: pointer;
@@ -90,6 +92,13 @@ onMounted(async () => {
   border: 2px solid var(--borde);
 }
 
+.detalle-cats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+
 .detalle-cat {
   display: inline-block;
   background-color: var(--primario);
@@ -98,7 +107,6 @@ onMounted(async () => {
   border-radius: 20px;
   font-size: 0.8rem;
   font-weight: 700;
-  margin-top: 12px;
   letter-spacing: 1px;
 }
 
