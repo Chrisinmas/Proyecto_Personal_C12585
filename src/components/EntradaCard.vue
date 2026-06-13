@@ -1,7 +1,7 @@
 <script setup>
 import { useRouter } from 'vue-router'
 
-const props = defineProps({ personaje: Object })
+const props = defineProps({ personaje: Object, categoriaActiva: String })
 const router = useRouter()
 
 function verDetalle() {
@@ -18,7 +18,7 @@ function verDetalle() {
         class="card-img"
         @error="$event.target.src = `https://placehold.co/300x350/1a1a2e/e23636?text=${personaje.nombre}`"
       />
-      <span class="badge-cat">{{ personaje.categorias[0] }}</span>
+      <span class="badge-cat">{{ categoriaActiva !== 'Todos' && personaje.categorias.includes(categoriaActiva) ? categoriaActiva : personaje.categorias[0] }}</span>
       <div v-if="personaje.audio" class="badge-audio">🎧</div>
     </div>
     <div class="card-body">

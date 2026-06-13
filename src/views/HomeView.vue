@@ -64,10 +64,11 @@ onMounted(async () => {
 
     <div v-else class="grilla">
       <EntradaCard
-        v-for="p in personajesFiltrados"
-        :key="p.id"
-        :personaje="p"
-      />
+  v-for="p in personajesFiltrados"
+  :key="p.id"
+  :personaje="p"
+  :categoriaActiva="categoriaActiva"
+/>
     </div>
   </div>
 </template>
