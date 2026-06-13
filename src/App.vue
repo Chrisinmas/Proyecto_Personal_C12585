@@ -6,7 +6,7 @@ const modoOscuro = ref(true)
 </script>
 
 <template>
-  <div :class="{ dark: modoOscuro }">
+  <div id="app" :class="{ dark: modoOscuro }">
     <AppHeader :modoOscuro="modoOscuro" @toggleModo="modoOscuro = !modoOscuro" />
     <main class="contenedor">
       <RouterView />
@@ -27,7 +27,7 @@ const modoOscuro = ref(true)
   --header: #1a1a2e;
 }
 
-.dark {
+#app.dark {
   --fondo: #0a0a0f;
   --fondo-card: #12121e;
   --texto: #f0f0f0;
@@ -39,17 +39,28 @@ const modoOscuro = ref(true)
   --header: #0d0d1a;
 }
 
-*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 body {
-  background-color: var(--fondo);
-  color: var(--texto);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  transition: background-color 0.3s, color 0.3s;
   min-height: 100vh;
 }
 
-a { text-decoration: none; color: inherit; }
+#app {
+  background-color: var(--fondo);
+  color: var(--texto);
+  min-height: 100vh;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
 
 .contenedor {
   max-width: 1200px;
